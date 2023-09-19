@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" novalidate>
+    {% csrf_token %}
+    <div>
+        {% for f in form3 %}
+            <div>{{ f.label_tag }}</div>
+            <div>{{ f }}</div>
+            <div>{{ f.errors }}</div>
+        {% endfor %}
+    </div>
+    <br>
+    <input type="submit" value="Поиск">
+</form>
+
+</body>
+</html>

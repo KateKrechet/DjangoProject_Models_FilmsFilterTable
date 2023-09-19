@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<a href="{% url "all" %}">Вывести все фильмы</a>
+<a href="{% url "country_filter" %}">Отфильтровать фильмы по стране</a>
+<a href="{% url "year_filter" %}">Отфильтровать фильмы по году выпуска</a>
+<a href="{% url "double_filter" %}">Отфильтровать по стране с исключением года выпуска</a>
+
+</body>
+</html>

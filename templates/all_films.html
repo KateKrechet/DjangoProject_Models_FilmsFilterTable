@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Список отфильтрованных фильмов</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Название фильма</th>
+        <th>Страна</th>
+        <th>Год выпуска</th>
+    </tr>
+    {% for one in database %}
+        <tr>
+            <td>{{ one.id }}</td>
+            <td>{{ one.title }}</td>
+            <td>{{ one.country }}</td>
+            <td>{{ one.year }}</td>
+
+        </tr>
+    {% endfor %}
+</table>
+<br>
+<a href="{% url 'home' %}">На главную</a>
+
+</body>
+</html>
